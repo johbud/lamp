@@ -1,5 +1,9 @@
 {
     "python.linting.flake8Enabled": true,
+    "python.linting.flake8Args": [
+        "--ignore=E501",
+        "--extension-pkg-whitelist=PyQt6"
+    ],
     "python.linting.enabled": true,
     "python.analysis.typeCheckingMode": "strict",
     "editor.formatOnSave": true,
