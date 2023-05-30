@@ -6,16 +6,16 @@ from lamp_core import Lamp
 class TestLamp(unittest.TestCase):
     """Test the Lamp class"""
 
-    def test_find_projects(self):
+    def test_find_projects(self) -> None:
         """Test the find_projects method"""
         lamp = Lamp()
-        projects = lamp.find_projects()
+        projects: list[str] = lamp.find_projects()
         self.assertEqual(projects, ["23_1234_testprojekt_A", "23_1234_testprojekt_B"])
 
-    def test_find_tasks(self):
+    def test_find_tasks(self) -> None:
         """Test the find_tasks method"""
         lamp = Lamp()
-        tasks = lamp.find_tasks("23_1234_testprojekt_A")
+        tasks: list[str] = lamp.find_tasks("23_1234_testprojekt_A")
         self.assertEqual(
             tasks,
             [
